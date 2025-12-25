@@ -24,18 +24,15 @@ const Products = () => {
 
   return (
     <div className="text-white">
-      {/* Header */}
       <h1 className="text-2xl font-semibold mb-1">Products</h1>
       <p className="text-gray-400 mb-6">
         Browse and filter products ({filteredProducts.length} products)
       </p>
 
-      {/* Filters */}
       <div className="bg-[#0f172a] rounded-xl p-6 mb-8">
         <h2 className="text-lg font-semibold mb-4">Filters</h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {/* Brand */}
           <div>
             <label className="block text-sm mb-2">Brand</label>
             <select
@@ -50,7 +47,6 @@ const Products = () => {
             </select>
           </div>
 
-          {/* Category */}
           <div>
             <label className="block text-sm mb-2">Category</label>
             <select
@@ -65,7 +61,6 @@ const Products = () => {
             </select>
           </div>
 
-          {/* Price */}
           <div>
             <label className="block text-sm mb-2">Price Range</label>
             <select
@@ -82,14 +77,12 @@ const Products = () => {
         </div>
       </div>
 
-      {/* Products Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {filteredProducts.map((product) => (
           <div
             key={product.id}
             className="bg-[#020617] rounded-xl overflow-hidden shadow"
           >
-            {/* Image with Brand Badge */}
             <div className="relative">
               <img
                 src={product.image}
@@ -101,7 +94,6 @@ const Products = () => {
               </span>
             </div>
 
-            {/* Card Body */}
             <div className="p-4">
               <h3 className="font-semibold">{product.title}</h3>
               <p className="text-sm text-gray-400">{product.category}</p>

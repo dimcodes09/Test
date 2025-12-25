@@ -13,13 +13,11 @@ const Users = () => {
 
   return (
     <div className="text-white">
-      {/* Header */}
       <h1 className="text-2xl font-semibold mb-1">Users</h1>
       <p className="text-gray-400 mb-6">
         Manage and filter users ({filteredUsers.length} users)
       </p>
 
-      {/* Filters */}
       <div className="bg-[#0f172a] rounded-xl p-6 mb-8">
         <h2 className="text-lg font-semibold mb-4">Filters</h2>
 
@@ -38,14 +36,13 @@ const Users = () => {
         </div>
       </div>
 
-      {/* Users Grid */}
+
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {filteredUsers.map((user) => (
           <div
             key={user.id}
             className="bg-[#020617] rounded-xl p-5 shadow"
           >
-            {/* Top Section */}
             <div className="flex items-center gap-4 mb-4">
               <img
                 src={user.avatar}
@@ -61,7 +58,6 @@ const Users = () => {
               </div>
             </div>
 
-            {/* Details */}
             <div className="space-y-2 text-sm text-gray-300">
               <p>📧 {user.email}</p>
               <p>📞 {user.phone}</p>
